@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2019 mauireyes" description="NaiveBayes Model">
+  <Extension name="user" value="mauireyes" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2019-04-07 21:55:03</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="8">
+  <DataField name="target" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="price" optype="continuous" dataType="double"/>
+  <DataField name="balance" optype="continuous" dataType="double"/>
+  <DataField name="category" optype="categorical" dataType="string">
+   <Value value="Books &amp; Education"/>
+   <Value value="Clothing"/>
+   <Value value="Food &amp; Drink"/>
+   <Value value="Health &amp; Beauty"/>
+   <Value value="Personal Development"/>
+   <Value value="Technology"/>
+   <Value value="Transport"/>
+  </DataField>
+  <DataField name="needorwant" optype="categorical" dataType="string">
+   <Value value="Need"/>
+   <Value value="Want"/>
+  </DataField>
+  <DataField name="desire" optype="categorical" dataType="string">
+   <Value value="1"/>
+   <Value value="2"/>
+   <Value value="3"/>
+   <Value value="NEED"/>
+  </DataField>
+  <DataField name="monthlyincome" optype="continuous" dataType="double"/>
+  <DataField name="monthlyneeds" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <NaiveBayesModel modelName="naiveBayes_Model" functionName="classification" threshold="0.001">
+  <MiningSchema>
+   <MiningField name="target" usageType="predicted" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="price" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="balance" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="category" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="needorwant" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="desire" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyincome" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyneeds" usageType="active" invalidValueTreatment="returnInvalid"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_target" optype="categorical" dataType="string" feature="predictedValue"/>
+   <OutputField name="Probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+  </Output>
+  <BayesInputs>
+   <BayesInput fieldName="price">
+    <TargetValueStats>
+     <TargetValueStat value="0">
+      <GaussianDistribution mean="129.89380952381" variance="24471.4381747619"/>
+     </TargetValueStat>
+     <TargetValueStat value="1">
+      <GaussianDistribution mean="124.29131147541" variance="123379.459398251"/>
+     </TargetValueStat>
+    </TargetValueStats>
+   </BayesInput>
+   <BayesInput fieldName="balance">
+    <TargetValueStats>
+     <TargetValueStat value="0">
+      <GaussianDistribution mean="679.666666666667" variance="1402237.83333333"/>
+     </TargetValueStat>
+     <TargetValueStat value="1">
+      <GaussianDistribution mean="716.688524590164" variance="1932202.78469945"/>
+     </TargetValueStat>
+    </TargetValueStats>
+   </BayesInput>
+   <BayesInput fieldName="category">
+    <PairCounts value="Books &amp; Education">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="1"/>
+      <TargetValueCount value="1" count="5"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Clothing">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="2"/>
+      <TargetValueCount value="1" count="8"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Food &amp; Drink">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="1"/>
+      <TargetValueCount value="1" count="19"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Health &amp; Beauty">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="6"/>
+      <TargetValueCount value="1" count="8"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Personal Development">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="1"/>
+      <TargetValueCount value="1" count="1"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Technology">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="8"/>
+      <TargetValueCount value="1" count="9"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Transport">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="2"/>
+      <TargetValueCount value="1" count="11"/>
+     </TargetValueCounts>
+    </PairCounts>
+   </BayesInput>
+   <BayesInput fieldName="needorwant">
+    <PairCounts value="Need">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="3"/>
+      <TargetValueCount value="1" count="35"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="Want">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="18"/>
+      <TargetValueCount value="1" count="26"/>
+     </TargetValueCounts>
+    </PairCounts>
+   </BayesInput>
+   <BayesInput fieldName="desire">
+    <PairCounts value="1">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="7"/>
+      <TargetValueCount value="1" count="4"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="2">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="1"/>
+      <TargetValueCount value="1" count="8"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="3">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="9"/>
+      <TargetValueCount value="1" count="14"/>
+     </TargetValueCounts>
+    </PairCounts>
+    <PairCounts value="NEED">
+     <TargetValueCounts>
+      <TargetValueCount value="0" count="4"/>
+      <TargetValueCount value="1" count="35"/>
+     </TargetValueCounts>
+    </PairCounts>
+   </BayesInput>
+   <BayesInput fieldName="monthlyincome">
+    <TargetValueStats>
+     <TargetValueStat value="0">
+      <GaussianDistribution mean="875" variance="777540"/>
+     </TargetValueStat>
+     <TargetValueStat value="1">
+      <GaussianDistribution mean="1533.50819672131" variance="1224503.08743169"/>
+     </TargetValueStat>
+    </TargetValueStats>
+   </BayesInput>
+   <BayesInput fieldName="monthlyneeds">
+    <TargetValueStats>
+     <TargetValueStat value="0">
+      <GaussianDistribution mean="56.9047619047619" variance="391.190476190476"/>
+     </TargetValueStat>
+     <TargetValueStat value="1">
+      <GaussianDistribution mean="60.7377049180328" variance="275.696721311475"/>
+     </TargetValueStat>
+    </TargetValueStats>
+   </BayesInput>
+  </BayesInputs>
+  <BayesOutput fieldName="target">
+   <TargetValueCounts>
+    <TargetValueCount value="0" count="21"/>
+    <TargetValueCount value="1" count="61"/>
+   </TargetValueCounts>
+  </BayesOutput>
+ </NaiveBayesModel>
+</PMML>

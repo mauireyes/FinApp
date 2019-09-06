@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="FIN - Suggestions" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.SuggestionsPage">
+    <ContentPage.Content>
+        <StackLayout>
+    <Label Text="How much is the item/service?" />
+          <Entry x:Name="askPrice" Text="{Binding AskPrice}" Keyboard="Numeric" Placeholder="Price"  WidthRequest="30"></Entry>
+            <Label Text="How much do you allocate for your monthly needs? in %" />
+           <Entry x:Name="askMonthlyNeeds" Text="{Binding AskMonthlyNeeds}" Keyboard="Numeric" Placeholder="Monthly needs in % "  WidthRequest="30"></Entry>
+           
+  <Picker x:Name="askCategory" ItemsSource="{Binding AskCategories}" SelectedItem="{Binding SelectedAskCategory}" Title="Category" >  </Picker>
+            
+             <Picker x:Name="askNeedOrWant" SelectedItem="{Binding AskNeedOrWant}" Title="Need or Want?" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                      <x:String>Need</x:String>
+                      <x:String>Want</x:String>
+                    </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            
+            
+            
+            
+             <Picker x:Name="askDesire" SelectedItem="{Binding AskDesire}" Title="How much do you want the item?" >
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                      <x:String>1</x:String>
+                     <x:String>2</x:String>
+                        <x:String>3</x:String>
+                        <x:String>NEED</x:String>
+                    </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            
+            <StackLayout HorizontalOptions="Center">        
+        <ImageButton Source="idea.png" HorizontalOptions="Center"  Command="{Binding AskCommand}" WidthRequest="50" BackgroundColor="Transparent" ></ImageButton>
+       <Label FontAttributes="Bold" HorizontalOptions="Center">Ask</Label>
+            </StackLayout>
+            
+   <!-- <WebView Source="https://marylouisereyes.shinyapps.io/FINApplication/" HeightRequest="1000 WidthRequest="1000" /> -->
+            
+     </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

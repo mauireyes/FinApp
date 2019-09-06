@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.MenuBar">
+    <ContentView.Content>
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>           
+           </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>            
+           </Grid.ColumnDefinitions>
+      
+            <Button Grid.Row="0" Grid.Column="0"  BackgroundColor="Aqua" Text="Profile" TextColor="Black"></Button>
+            <Button Grid.Row="0" Grid.Column="1"  BackgroundColor="Fuchsia"  Text="History" TextColor="Black" ></Button>
+            <Button Grid.Row="0" Grid.Column="3"  BackgroundColor="Yellow"  Text="?" TextColor="Black"></Button>
+            <Button Grid.Row="0" Grid.Column="4"  BackgroundColor="Green"  Text="REPORT" TextColor="Black"></Button>
+   
+            
+            
+            <ImageButton Grid.Row="0" Grid.Column="2" Command="{Binding EnterNewTransactionCommand}" Source="AddButton.png"/>
+        
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

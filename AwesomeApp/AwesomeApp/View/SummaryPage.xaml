@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.SummaryPage">
+    <ContentPage.Content>
+        
+        <StackLayout>
+             <Picker FontSize="Large" Title="Category" x:Name="transactionCategory"
+                            BackgroundColor="Transparent" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}" >
+                
+                   </Picker>
+             <StackLayout  Orientation="Horizontal">
+                <Label FontSize="Medium" FontAttributes="Bold" Text="Income:" HorizontalOptions="StartAndExpand"></Label>
+                             <Label FontSize="Medium" Text="{Binding Income}" HorizontalOptions="FillAndExpand"></Label>
+                 </StackLayout>
+             <StackLayout  Orientation="Horizontal">
+                <Label FontSize="Medium" FontAttributes="Bold" Text="Expense:" HorizontalOptions="StartAndExpand"></Label>
+                             <Label FontSize="Medium" Text="{Binding Expense}" HorizontalOptions="FillAndExpand"></Label>
+                
+                 </StackLayout>
+                   
+            <StackLayout Orientation="Horizontal">
+             <Label FontSize="Medium" FontAttributes="Bold" Text="Balance:" HorizontalOptions="StartAndExpand"></Label>
+                             <Label FontSize="Medium" Text="{Binding Balance}" HorizontalOptions="FillAndExpand"></Label>
+            
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

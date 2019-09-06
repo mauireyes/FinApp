@@ -1,0 +1,98 @@
+target,price,balance,category,needorwant,desire,monthlyincome,monthlyneeds
+Yes,12.00,150.00,Food & Drink,Need,NEED,700.00,30
+No,70.00,170.00,Clothing,Want,1,400.00,70
+No,145.00,400.00,Health & Beauty,Want,3,400.00,30
+Yes,7.50,50.00,Food & Drink,Need,NEED,800.00,80
+Yes,1400.00,4000.00,Technology,Need,NEED,135.00,90
+Yes,8.00,518.00,Food & Drink,Need,NEED,110.00,80
+No,357.00,3983.00,Health & Beauty,Want,3,1300.00,70
+Yes,56.99,6800.00,Transport,Need,NEED,2500.00,65
+No,613.50,3200.00,Technology,Want,3,350.00,50
+Yes,7.60,350.00,Food & Drink,Need,NEED,2300.00,70
+Yes,27.00,265.00,Food & Drink,Need,NEED,2450.00,70
+Yes,13.50,560.00,Books & Education,Want,3,2900.00,60
+No,5.50,685.00,Transport,Need,NEED,125.00,20
+Yes,10.00,234.00,Clothing,Need,NEED,2400.00,65
+No,47.80,60.00,Books & Education,Want,1,650.00,40
+Yes,5.00,487.00,Transport,Need,NEED,1800.00,75
+Yes,17.30,150.00,Food & Drink,Need,NEED,3000.00,70
+No,8.00,55.00,Health & Beauty,Want,3,250.00,50
+Yes,75.00,500.00,Transport,Need,NEED,300.00,50
+Yes,4.50,20.00,Food & Drink,Need,NEED,350.00,40
+No,53.75,40.00,Personal Development,Want,NEED,130.00,70
+Yes,2.50,400.00,Transport,Need,NEED,2300.00,60
+Yes,40.00,360.00,Personal Development,Want,3,2600.00,75
+Yes,1.00,110.00,Food & Drink,Need,NEED,1900.00,60
+No,350.00,130.00,Technology,Want,3,150.00,20
+Yes,5.00,59.00,Books & Education,Want,3,200.00,50
+Yes,13.50,80.00,Clothing,Want,3,2600.00,50
+Yes,1500.00,2000.00,Technology,Need,NEED,1900.00,65
+Yes,130.00,50.00,Health & Beauty,Want,1,2400.00,60
+Yes,10.00,150.00,Transport,Need,NEED,400.00,50
+Yes,11.00,800.00,Clothing,Want,2,1200.00,60
+Yes,30.00,800.00,Food & Drink,Need,NEED,1200.00,60
+No,200.00,200.00,Clothing,Want,1,1600.00,70
+Yes,50.00,300.00,Health & Beauty,Want,3,2000.00,50
+No,19.99,50.00,Technology,Want,1,280.00,80
+Yes,7.00,90.00,Food & Drink,Want,2,320.00,80
+Yes,5.00,80.00,Food & Drink,Want,2,400.00,60
+Yes,30.00,400.00,Technology,Want,3,135.00,100
+Yes,20.00,200.00,Technology,Need,NEED,500.00,50
+Yes,60.00,200.00,Health & Beauty,Want,2,700.00,50
+Yes,600.00,3000.00,Transport,Want,2,2000.00,50
+Yes,5.00,40.00,Food & Drink,Need,NEED,500.00,40
+No,140.00,200.00,Health & Beauty,Want,2,1000.00,50
+Yes,90.00,150.00,Clothing,Want,3,1500.00,70
+Yes,50.00,200.00,Health & Beauty,Want,2,2000.00,70
+Yes,13.98,50.00,Food & Drink,Need,NEED,500.00,70
+Yes,58.90,100.00,Personal Development,Need,NEED,600.00,50
+No,23.99,50.00,Health & Beauty,Want,1,1500.00,50
+Yes,56.00,379.00,Books & Education,Want,3,1800.00,60
+No,34.00,50.00,Health & Beauty,Want,3,300.00,80
+Yes,53.00,120.00,Food & Drink,Need,3,2100.00,70
+Yes,25.00,80.00,Technology,Want,3,1999.00,70
+Yes,30.00,130.00,Books & Education,Need,NEED,500.00,50
+Yes,16.00,40.00,Food & Drink,Need,NEED,2600.00,80
+Yes,30.00,64.00,Technology,Need,3,3200.00,80
+No,150.00,500.00,Technology,Want,1,3200.00,70
+Yes,50.00,200.00,Food & Drink,Need,NEED,2800.00,75
+No,47.00,230.00,Personal Development,Want,3,300.00,70
+Yes,2.50,30.00,Transport,Need,NEED,200.00,80
+Yes,15.00,300.00,Clothing,Want,3,400.00,60
+Yes,28.00,42.00,Food & Drink,Need,NEED,2400.00,80
+Yes,16.00,100.00,Books & Education,Want,3,2900.00,75
+No,300.00,260.00,Technology,Want,3,3000.00,75
+Yes,50.00,400.00,Books & Education,Need,NEED,2800.00,70
+Yes,1900.00,1000.00,Transport,Want,2,2000.00,40
+Yes,100.00,1000.00,Food & Drink,Need,NEED,4000.00,30
+Yes,50.00,3000.00,Food & Drink,Need,NEED,4000.00,30
+Yes,220.00,3000.00,Health & Beauty,Need,NEED,4000.00,30
+Yes,90.00,1000.00,Health & Beauty,Need,NEED,2000.00,40
+No,34.00,400.00,Food & Drink,Need,NEED,300.00,30
+Yes,64.00,400.00,Food & Drink,Want,1,600.00,60
+No,82.00,300.00,Technology,Need,NEED,700.00,70
+Yes,49.00,500.00,Clothing,Want,1,500.00,90
+Yes,42.00,540.00,Clothing,Want,3,2600.00,50
+Yes,75.00,200.00,Clothing,Need,NEED,1900.00,70
+Yes,4.00,150.00,Technology,Want,1,2400.00,30
+Yes,56.00,80.00,Health & Beauty,Need,NEED,400.00,85
+Yes,75.00,90.00,Transport,Want,2,1200.00,60
+Yes,23.00,200.00,Transport,Need,NEED,1200.00,60
+No,64.00,90.00,Transport,Want,1,1600.00,70
+Yes,86.00,90.00,Health & Beauty,Want,3,2000.00,50
+No,23.00,60.00,Technology,Want,NEED,320.00,80
+Yes,3.00,200.00,Food & Drink,Want,NEED,400.00,80
+Yes,55.60,40.00,Health & Beauty,Want,2,135.00,60
+Yes,34.90,500.00,Technology,Want,NEED,500.00,100
+Yes,23.40,230.00,Food & Drink,Need,NEED,500.00,50
+Yes,76.70,500.00,Transport,Need,NEED,890.00,50
+Yes,23.60,6800.00,Transport,Need,NEED,230.00,65
+No,12.99,3200.00,Technology,Want,3,650.00,50
+Yes,20.00,200.00,Technology,Need,NEED,500.00,50
+Yes,60.00,200.00,Technology,Want,2,350.00,50
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AwesomeApp" x:Class="AwesomeApp.MainPage"> 
+<Grid BackgroundColor="White">
+        
+
+    <Grid.RowDefinitions>
+             <RowDefinition Height="60" />
+             <RowDefinition Height="300" />
+             <RowDefinition Height="60" />
+    </Grid.RowDefinitions>
+    
+   
+     <Label x:Name="PageTitle" Grid.Row="0" HorizontalTextAlignment="Center" >Hello This is page 1.</Label>
+     
+           <StackLayout Grid.Row="1">
+                
+                <Entry x:Name="entry_Username" TextColor="Black" Placeholder="Username" BackgroundColor="White" WidthRequest="30"></Entry>     
+                
+                <Entry x:Name="entry_Password" TextColor="Black" Placeholder="Password" BackgroundColor="White" IsPassword="true" WidthRequest="30"></Entry>
+                 <Button x:Name="PressHere" Clicked="Handle_Clicked" FontSize="Large" Text="LOG - IN" BackgroundColor="Fuchsia"
+                   WidthRequest="50"/>
+            
+            <Label x:Name="myText">HELLO WORLD </Label>
+        </StackLayout>
+            
+  
+    </Grid>
+</ContentPage>

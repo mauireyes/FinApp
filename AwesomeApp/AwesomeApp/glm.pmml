@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2019 mauireyes" description="Generalized Linear Regression Model">
+  <Extension name="user" value="mauireyes" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2019-04-07 21:55:04</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="8">
+  <DataField name="target" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="price" optype="continuous" dataType="double"/>
+  <DataField name="balance" optype="continuous" dataType="double"/>
+  <DataField name="category" optype="categorical" dataType="string">
+   <Value value="Books &amp; Education"/>
+   <Value value="Clothing"/>
+   <Value value="Food &amp; Drink"/>
+   <Value value="Health &amp; Beauty"/>
+   <Value value="Personal Development"/>
+   <Value value="Technology"/>
+   <Value value="Transport"/>
+  </DataField>
+  <DataField name="needorwant" optype="categorical" dataType="string">
+   <Value value="Need"/>
+   <Value value="Want"/>
+  </DataField>
+  <DataField name="desire" optype="categorical" dataType="string">
+   <Value value="1"/>
+   <Value value="2"/>
+   <Value value="3"/>
+   <Value value="NEED"/>
+  </DataField>
+  <DataField name="monthlyincome" optype="continuous" dataType="double"/>
+  <DataField name="monthlyneeds" optype="continuous" dataType="double"/>
+ </DataDictionary>
+ <GeneralRegressionModel modelName="General_Regression_Model" modelType="generalizedLinear" functionName="classification" algorithmName="glm" distribution="binomial" linkFunction="logit">
+  <MiningSchema>
+   <MiningField name="target" usageType="predicted" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="price" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="balance" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="category" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="needorwant" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="desire" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyincome" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyneeds" usageType="active" invalidValueTreatment="returnInvalid"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Probability_1" targetField="target" feature="probability" value="1" optype="continuous" dataType="double"/>
+   <OutputField name="Predicted_target" feature="predictedValue" optype="categorical" dataType="string"/>
+  </Output>
+  <ParameterList>
+   <Parameter name="p0" label="(Intercept)"/>
+   <Parameter name="p1" label="price"/>
+   <Parameter name="p2" label="balance"/>
+   <Parameter name="p3" label="categoryClothing"/>
+   <Parameter name="p4" label="categoryFood &amp; Drink"/>
+   <Parameter name="p5" label="categoryHealth &amp; Beauty"/>
+   <Parameter name="p6" label="categoryPersonal Development"/>
+   <Parameter name="p7" label="categoryTechnology"/>
+   <Parameter name="p8" label="categoryTransport"/>
+   <Parameter name="p9" label="needorwantWant"/>
+   <Parameter name="p10" label="desire2"/>
+   <Parameter name="p11" label="desire3"/>
+   <Parameter name="p12" label="desireNEED"/>
+   <Parameter name="p13" label="monthlyincome"/>
+   <Parameter name="p14" label="monthlyneeds"/>
+  </ParameterList>
+  <FactorList>
+   <Predictor name="category"/>
+   <Predictor name="needorwant"/>
+   <Predictor name="desire"/>
+  </FactorList>
+  <CovariateList>
+   <Predictor name="price"/>
+   <Predictor name="balance"/>
+   <Predictor name="monthlyincome"/>
+   <Predictor name="monthlyneeds"/>
+  </CovariateList>
+  <PPMatrix>
+   <PPCell value="1" predictorName="price" parameterName="p1"/>
+   <PPCell value="1" predictorName="balance" parameterName="p2"/>
+   <PPCell value="Clothing" predictorName="category" parameterName="p3"/>
+   <PPCell value="Food &amp; Drink" predictorName="category" parameterName="p4"/>
+   <PPCell value="Health &amp; Beauty" predictorName="category" parameterName="p5"/>
+   <PPCell value="Personal Development" predictorName="category" parameterName="p6"/>
+   <PPCell value="Technology" predictorName="category" parameterName="p7"/>
+   <PPCell value="Transport" predictorName="category" parameterName="p8"/>
+   <PPCell value="Want" predictorName="needorwant" parameterName="p9"/>
+   <PPCell value="2" predictorName="desire" parameterName="p10"/>
+   <PPCell value="3" predictorName="desire" parameterName="p11"/>
+   <PPCell value="NEED" predictorName="desire" parameterName="p12"/>
+   <PPCell value="1" predictorName="monthlyincome" parameterName="p13"/>
+   <PPCell value="1" predictorName="monthlyneeds" parameterName="p14"/>
+  </PPMatrix>
+  <ParamMatrix>
+   <PCell targetCategory="1" parameterName="p0" df="1" beta="-0.944999851235978"/>
+   <PCell targetCategory="1" parameterName="p1" df="1" beta="-0.000365969131890794"/>
+   <PCell targetCategory="1" parameterName="p2" df="1" beta="-9.62895522368237e-05"/>
+   <PCell targetCategory="1" parameterName="p3" df="1" beta="-1.04299034730244"/>
+   <PCell targetCategory="1" parameterName="p4" df="1" beta="-0.442908438726276"/>
+   <PCell targetCategory="1" parameterName="p5" df="1" beta="-2.7362677522323"/>
+   <PCell targetCategory="1" parameterName="p6" df="1" beta="-3.03013962546393"/>
+   <PCell targetCategory="1" parameterName="p7" df="1" beta="-3.2070751438287"/>
+   <PCell targetCategory="1" parameterName="p8" df="1" beta="-2.15007724866788"/>
+   <PCell targetCategory="1" parameterName="p9" df="1" beta="-2.28606127663016"/>
+   <PCell targetCategory="1" parameterName="p10" df="1" beta="4.08658757699251"/>
+   <PCell targetCategory="1" parameterName="p11" df="1" beta="1.75061001300241"/>
+   <PCell targetCategory="1" parameterName="p12" df="1" beta="2.04910237365344"/>
+   <PCell targetCategory="1" parameterName="p13" df="1" beta="0.00115469320289023"/>
+   <PCell targetCategory="1" parameterName="p14" df="1" beta="0.0455661303673191"/>
+  </ParamMatrix>
+ </GeneralRegressionModel>
+</PMML>

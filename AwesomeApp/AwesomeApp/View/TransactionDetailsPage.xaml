@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Title="Transaction Details" xmlns:local="clr-namespace:AwesomeApp.View" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.TransactionDetailsPage" >
+    <ContentPage.Content>
+
+             <StackLayout>
+              
+                <local:TransactionDetails/>
+             <Label Text="Created at:"/>
+             <Label Text="{Binding CreatedAt}"/>
+            <StackLayout HorizontalOptions="Center">        
+            <ImageButton Source="edit.png" HorizontalOptions="Center"  Command="{Binding UpdateTransactionCommand}" WidthRequest="50" BackgroundColor="Transparent" ></ImageButton>
+           <Label FontAttributes="Bold" HorizontalOptions="Center">Update</Label>
+            </StackLayout>
+                
+             <StackLayout HorizontalOptions="Center">        
+            <ImageButton Source="delete.png" HorizontalOptions="Center"  Command="{Binding DeleteTransactionCommand}" WidthRequest="50" BackgroundColor="Transparent" ></ImageButton>
+           <Label FontAttributes="Bold" HorizontalOptions="Center">Delete</Label>
+            </StackLayout>            
+        </StackLayout>
+<!--            <local:MenuBar Grid.Row="2" VerticalOptions="End"/>-->
+
+       
+    </ContentPage.Content>
+</ContentPage>

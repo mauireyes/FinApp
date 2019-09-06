@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.SettingsPage">
+    <ContentPage.Content>
+          <TableView Intent="Form" HasUnevenRows="true">
+          <TableRoot>
+              <TableSection>
+                    
+                  <ViewCell>
+                            
+                            <StackLayout>
+                            <Label FontSize="Medium"> New Category: </Label>
+                            <Entry Placeholder="Category" Text="{Binding CategoryName}" ></Entry>      
+                                <Button BorderColor="Navy" Text="Add" BorderWidth="1" Margin="15" Command="{Binding AddNewCategoryCommand}"
+                                        ></Button>
+                              </StackLayout>
+        
+                  </ViewCell>
+                   <ViewCell>
+                        <StackLayout>
+                           <Label FontSize="Medium"> Delete a category: </Label>
+                            <Picker Title="Category" ItemsSource="{Binding Categories}" SelectedItem="{Binding CategoryToDelete, Mode=TwoWay}" ></Picker>
+                            <Button Text="Delete" BorderColor="Navy" Command="{Binding DeleteCategoryCommand}"
+                                    BorderWidth="1" Margin="15"></Button>
+                        </StackLayout>
+                  </ViewCell>
+                          <ViewCell >
+                        <StackLayout>
+                            <Label FontSize="Medium"> Delete Transactions: </Label>
+                            <StackLayout Orientation="Horizontal">
+                            <Picker HorizontalOptions="FillAndExpand" Title="Type" ItemsSource="{Binding Types}" SelectedItem="{Binding SelectedType}"></Picker>
+                            <Picker HorizontalOptions="FillAndExpand" Title="Category" ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}"></Picker>
+                            </StackLayout>
+                            <Button  BorderColor="Navy" BorderWidth="1" Text="Delete" Margin="15" Command="{Binding DeleteTransactionsCommand}"></Button>
+                        </StackLayout>
+                  </ViewCell>
+                       <ViewCell>
+                      <Button Command="{Binding DeleteAllTransactionsCommand}"  BorderColor="Navy" BorderWidth="1" Text="Delete All Entries"></Button>
+                  </ViewCell>
+              </TableSection>
+          </TableRoot>
+      </TableView>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

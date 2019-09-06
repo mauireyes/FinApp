@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.TransactionDetails" >
+    <ContentView.Content>
+                     <StackLayout Grid.Row="2">
+               
+                <Picker x:Name="transactionCategory" ItemsSource="{Binding Categories}" SelectedItem="{Binding Category}" Title="Category" >
+                </Picker>
+                <Entry x:Name="transactionAmount" Text="{Binding Amount}" Keyboard="Numeric" Placeholder="Amount"  WidthRequest="30"></Entry>
+                
+            <Picker x:Name="transactionType" ItemsSource="{Binding Types}" SelectedItem="{Binding Type}" Title="Type">
+                </Picker>           
+            
+            <Editor  x:Name="transactionDescription" Text="{Binding Description}" Placeholder="Description" MaxLength="80" HeightRequest="100" />
+            
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<PMML version="4.3" xmlns="http://www.dmg.org/PMML-4_3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.dmg.org/PMML-4_3 http://www.dmg.org/pmml/v4-3/pmml-4-3.xsd">
+ <Header copyright="Copyright (c) 2019 mauireyes" description="RPart Decision Tree Model">
+  <Extension name="user" value="mauireyes" extender="Rattle/PMML"/>
+  <Application name="Rattle/PMML" version="1.4"/>
+  <Timestamp>2019-04-07 21:55:01</Timestamp>
+ </Header>
+ <DataDictionary numberOfFields="8">
+  <DataField name="target" optype="categorical" dataType="string">
+   <Value value="0"/>
+   <Value value="1"/>
+  </DataField>
+  <DataField name="price" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="2.5" rightMargin="1900"/>
+  </DataField>
+  <DataField name="balance" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="20" rightMargin="6800"/>
+  </DataField>
+  <DataField name="category" optype="categorical" dataType="string">
+   <Value value="Books &amp; Education"/>
+   <Value value="Clothing"/>
+   <Value value="Food &amp; Drink"/>
+   <Value value="Health &amp; Beauty"/>
+   <Value value="Personal Development"/>
+   <Value value="Technology"/>
+   <Value value="Transport"/>
+  </DataField>
+  <DataField name="needorwant" optype="categorical" dataType="string">
+   <Value value="Need"/>
+   <Value value="Want"/>
+  </DataField>
+  <DataField name="desire" optype="categorical" dataType="string">
+   <Value value="1"/>
+   <Value value="2"/>
+   <Value value="3"/>
+   <Value value="NEED"/>
+  </DataField>
+  <DataField name="monthlyincome" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="110" rightMargin="4000"/>
+  </DataField>
+  <DataField name="monthlyneeds" optype="continuous" dataType="double">
+   <Interval closure="closedClosed" leftMargin="20" rightMargin="100"/>
+  </DataField>
+ </DataDictionary>
+ <TreeModel modelName="RPart_Model" functionName="classification" algorithmName="rpart" splitCharacteristic="binarySplit" missingValueStrategy="defaultChild" noTrueChildStrategy="returnLastPrediction">
+  <MiningSchema>
+   <MiningField name="target" usageType="predicted" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="price" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="balance" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="category" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="needorwant" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="desire" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyincome" usageType="active" invalidValueTreatment="returnInvalid"/>
+   <MiningField name="monthlyneeds" usageType="active" invalidValueTreatment="returnInvalid"/>
+  </MiningSchema>
+  <Output>
+   <OutputField name="Predicted_target" optype="categorical" dataType="string" feature="predictedValue"/>
+   <OutputField name="Probability_0" optype="continuous" dataType="double" feature="probability" value="0"/>
+   <OutputField name="Probability_1" optype="continuous" dataType="double" feature="probability" value="1"/>
+  </Output>
+  <Node id="1" score="1" recordCount="82" defaultChild="3">
+   <True/>
+   <ScoreDistribution value="0" recordCount="21" confidence="0.25609756097561"/>
+   <ScoreDistribution value="1" recordCount="61" confidence="0.74390243902439"/>
+   <Node id="2" score="1" recordCount="34" defaultChild="4">
+    <CompoundPredicate booleanOperator="surrogate">
+     <SimpleSetPredicate field="desire" booleanOperator="isIn">
+      <Array n="2" type="string">&quot;1&quot; &quot;3&quot;</Array>
+     </SimpleSetPredicate>
+     <SimpleSetPredicate field="needorwant" booleanOperator="isIn">
+      <Array n="1" type="string">&quot;Want&quot;</Array>
+     </SimpleSetPredicate>
+     <SimpleSetPredicate field="category" booleanOperator="isIn">
+      <Array n="4" type="string">&quot;Books &amp; Education&quot; &quot;Clothing&quot; &quot;Health &amp; Beauty&quot; &quot;Technology&quot;</Array>
+     </SimpleSetPredicate>
+     <SimplePredicate field="balance" operator="lessThan" value="125"/>
+     <SimplePredicate field="price" operator="greaterOrEqual" value="84"/>
+     <SimplePredicate field="monthlyincome" operator="greaterOrEqual" value="2550"/>
+    </CompoundPredicate>
+    <ScoreDistribution value="0" recordCount="16" confidence="0.470588235294118"/>
+    <ScoreDistribution value="1" recordCount="18" confidence="0.529411764705882"/>
+    <Node id="4" score="0" recordCount="20" defaultChild="8">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="monthlyincome" operator="lessThan" value="1700"/>
+      <SimpleSetPredicate field="needorwant" booleanOperator="isIn">
+       <Array n="1" type="string">&quot;Want&quot;</Array>
+      </SimpleSetPredicate>
+      <SimpleSetPredicate field="category" booleanOperator="isIn">
+       <Array n="6" type="string">&quot;Clothing&quot; &quot;Food &amp; Drink&quot; &quot;Health &amp; Beauty&quot; &quot;Personal Development&quot; &quot;Technology&quot; &quot;Transport&quot;</Array>
+      </SimpleSetPredicate>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="14" confidence="0.7"/>
+     <ScoreDistribution value="1" recordCount="6" confidence="0.3"/>
+     <Node id="8" score="0" recordCount="12">
+      <CompoundPredicate booleanOperator="surrogate">
+       <SimpleSetPredicate field="category" booleanOperator="isIn">
+        <Array n="4" type="string">&quot;Health &amp; Beauty&quot; &quot;Personal Development&quot; &quot;Technology&quot; &quot;Transport&quot;</Array>
+       </SimpleSetPredicate>
+       <SimpleSetPredicate field="desire" booleanOperator="isIn">
+        <Array n="1" type="string">&quot;3&quot;</Array>
+       </SimpleSetPredicate>
+       <SimplePredicate field="monthlyincome" operator="lessThan" value="375"/>
+       <SimplePredicate field="price" operator="lessThan" value="47.4"/>
+      </CompoundPredicate>
+      <ScoreDistribution value="0" recordCount="11" confidence="0.916666666666667"/>
+      <ScoreDistribution value="1" recordCount="1" confidence="0.0833333333333333"/>
+     </Node>
+     <Node id="9" score="1" recordCount="8">
+      <CompoundPredicate booleanOperator="surrogate">
+       <SimpleSetPredicate field="category" booleanOperator="isIn">
+        <Array n="3" type="string">&quot;Books &amp; Education&quot; &quot;Clothing&quot; &quot;Food &amp; Drink&quot;</Array>
+       </SimpleSetPredicate>
+       <SimpleSetPredicate field="desire" booleanOperator="isIn">
+        <Array n="1" type="string">&quot;1&quot;</Array>
+       </SimpleSetPredicate>
+       <SimplePredicate field="monthlyincome" operator="greaterOrEqual" value="375"/>
+       <SimplePredicate field="price" operator="greaterOrEqual" value="47.4"/>
+      </CompoundPredicate>
+      <ScoreDistribution value="0" recordCount="3" confidence="0.375"/>
+      <ScoreDistribution value="1" recordCount="5" confidence="0.625"/>
+     </Node>
+    </Node>
+    <Node id="5" score="1" recordCount="14">
+     <CompoundPredicate booleanOperator="surrogate">
+      <SimplePredicate field="monthlyincome" operator="greaterOrEqual" value="1700"/>
+      <SimpleSetPredicate field="needorwant" booleanOperator="isIn">
+       <Array n="1" type="string">&quot;Need&quot;</Array>
+      </SimpleSetPredicate>
+      <SimpleSetPredicate field="category" booleanOperator="isIn">
+       <Array n="1" type="string">&quot;Books &amp; Education&quot;</Array>
+      </SimpleSetPredicate>
+     </CompoundPredicate>
+     <ScoreDistribution value="0" recordCount="2" confidence="0.142857142857143"/>
+     <ScoreDistribution value="1" recordCount="12" confidence="0.857142857142857"/>
+    </Node>
+   </Node>
+   <Node id="3" score="1" recordCount="48">
+    <CompoundPredicate booleanOperator="surrogate">
+     <SimpleSetPredicate field="desire" booleanOperator="isIn">
+      <Array n="2" type="string">&quot;2&quot; &quot;NEED&quot;</Array>
+     </SimpleSetPredicate>
+     <SimpleSetPredicate field="needorwant" booleanOperator="isIn">
+      <Array n="1" type="string">&quot;Need&quot;</Array>
+     </SimpleSetPredicate>
+     <SimpleSetPredicate field="category" booleanOperator="isIn">
+      <Array n="3" type="string">&quot;Food &amp; Drink&quot; &quot;Personal Development&quot; &quot;Transport&quot;</Array>
+     </SimpleSetPredicate>
+     <SimplePredicate field="balance" operator="greaterOrEqual" value="125"/>
+     <SimplePredicate field="price" operator="lessThan" value="84"/>
+     <SimplePredicate field="monthlyincome" operator="lessThan" value="2550"/>
+    </CompoundPredicate>
+    <ScoreDistribution value="0" recordCount="5" confidence="0.104166666666667"/>
+    <ScoreDistribution value="1" recordCount="43" confidence="0.895833333333333"/>
+   </Node>
+  </Node>
+ </TreeModel>
+</PMML>

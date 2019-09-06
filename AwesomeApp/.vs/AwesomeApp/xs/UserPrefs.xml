@@ -1,0 +1,61 @@
+﻿<Properties StartupConfiguration="{316AF552-2DFF-4B1A-9737-13BD98E29B09}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AwesomeApp/Viewmodel/TransactionDetailsViewModel.cs">
+    <Files>
+      <File FileName="AwesomeApp/Viewmodel/TransactionDetailsViewModel.cs" Line="59" Column="1" />
+      <File FileName="AwesomeApp/Viewmodel/AddTransactionViewModel.cs" Line="32" Column="36" />
+      <File FileName="AwesomeApp/View/MenuBar.xaml" />
+      <File FileName="AwesomeApp/View/SummaryPage.xaml" />
+      <File FileName="AwesomeApp/View/SummaryPage.xaml.cs" Line="14" Column="40" />
+      <File FileName="AwesomeApp/View/SettingsPage.xaml" />
+      <File FileName="AwesomeApp/View/SettingsPage.xaml.cs" Line="12" Column="33" />
+      <File FileName="AwesomeApp/AwesomeApp.csproj" Line="1" Column="1" />
+      <File FileName="AwesomeApp/App.xaml.cs" Line="29" Column="10" />
+      <File FileName="AwesomeApp/View/AddTransaction.xaml" />
+      <File FileName="AwesomeApp/View/MenuTabbedPage.xaml" />
+      <File FileName="AwesomeApp/View/MenuTabbedPage.xaml.cs" Line="19" Column="17" />
+      <File FileName="AwesomeApp/Model/Category.cs" Line="1" Column="1" />
+      <File FileName="AwesomeApp/Viewmodel/SummaryPageViewModel.cs" Line="10" Column="5" />
+      <File FileName="AwesomeApp/Viewmodel/SettingsViewModel.cs" Line="16" Column="72" />
+      <File FileName="AwesomeApp/Viewmodel/MenuBarViewModel.cs" Line="12" Column="73" />
+      <File FileName="AwesomeApp/View/SuggestionsPage.xaml" />
+      <File FileName="AwesomeApp/View/SuggestionsPage.xaml.cs" Line="10" Column="33" />
+      <File FileName="AwesomeApp/Viewmodel/SuggestionsViewModel.cs" Line="50" Column="36" />
+      <File FileName="AwesomeApp/View/SplashPage.cs" Line="43" Column="1" />
+      <File FileName="AwesomeApp.iOS/Info.plist" />
+      <File FileName="AwesomeApp.iOS/Entitlements.plist" />
+      <File FileName="AwesomeApp.iOS/Main.cs" Line="11" Column="6" />
+      <File FileName="AwesomeApp.iOS/Properties/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="AwesomeApp/glm.pmml" Line="1" Column="1" />
+      <File FileName="AwesomeApp/View/MenuBar.xaml.cs" Line="1" Column="1" />
+      <File FileName="AwesomeApp/View/AddTransaction.xaml.cs" Line="15" Column="38" />
+      <File FileName="AwesomeApp.Android/Resources/AboutResources.txt" Line="1" Column="1" />
+      <File FileName="AwesomeApp.Android/MainActivity.cs" Line="17" Column="1" />
+      <File FileName="AwesomeApp/Viewmodel/TransactionListViewModel.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AwesomeApp" expanded="True">
+            <Node name="AwesomeApp" expanded="True">
+              <Node name="Helpers" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="Viewmodel" expanded="True">
+                <Node name="TransactionDetailsViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.AwesomeApp.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.nexus9" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AwesomeApp HideGettingStarted="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.AwesomeApp.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.18159C8C-7E23-409C-8361-D75EEBBE258C" />
+</Properties>

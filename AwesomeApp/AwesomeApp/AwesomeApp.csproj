@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+    <PackageReference Include="MySql.Data" Version="8.0.15" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Syncfusion.PMML.Net.Core" Version="16.4.0.54" />
+    <PackageReference Include="SQLite.Net-PCL" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="View\" />
+    <Folder Include="Viewmodel\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="GetAllTransactionsPage.xaml.cs" />
+    <Compile Remove="Viewmodel\EmptyClass.cs" />
+    <Compile Remove="Viewmodel\ICommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="View\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Iris.pmml" />
+    <None Remove="glm.pmml" />
+    <None Remove="nb.pmml" />
+    <None Remove="rpart.pmml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\AwesomeApp.csproj.nuget.cache" />
+    <None Include="obj\AwesomeApp.csproj.nuget.g.props" />
+    <None Include="obj\AwesomeApp.csproj.nuget.g.targets" />
+    <None Include="obj\project.assets.json" />
+    <None Include="obj\Debug\netstandard2.0\AwesomeApp.assets.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="glm.pmml" />
+    <EmbeddedResource Include="nb.pmml" />
+    <EmbeddedResource Include="rpart.pmml" />
+  </ItemGroup>
+</Project>

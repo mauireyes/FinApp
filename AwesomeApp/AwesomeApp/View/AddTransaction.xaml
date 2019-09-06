@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  xmlns:local="clr-namespace:AwesomeApp.View" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AwesomeApp.View.AddTransaction" >
+    <ContentPage.Content>
+             <StackLayout>
+                <local:TransactionDetails/>
+         <StackLayout HorizontalOptions="Center">        
+        <ImageButton Source="add.png" HorizontalOptions="Center"  Command="{Binding AddTransactionCommand}" WidthRequest="50" BackgroundColor="Transparent" ></ImageButton>
+       <Label FontAttributes="Bold" HorizontalOptions="Center">Save</Label>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
